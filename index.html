@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">శ్రీ శ్రీ శ్రీ దుర్గాదేవి శరన్నవరాత్రి మహోత్సవములు</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Devotional Audio (Plays only on loading screen) -->
+    <audio id="devotionalAudio" loop preload="auto">
+        <source src="bgm.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Loading Screen with Divine Image -->
+    <div class="loading-screen" id="loadingScreen">
+        <!-- Enhanced Floating Particles -->
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        
+        <div class="divine-image-container" id="divineImageContainer">
+            <div class="divine-main-image" id="divineMainImage">
+                <!-- Sacred Symbols Around Image -->
+                <div class="sacred-symbol">🔱</div>
+                <div class="sacred-symbol">🪔</div>
+                <div class="sacred-symbol">🌺</div>
+                <div class="sacred-symbol">📿</div>
+                <div class="sacred-symbol">🕉️</div>
+                <div class="sacred-symbol">🚩</div>
+                <div class="sacred-symbol">🌸</div>
+                <div class="sacred-symbol">🔔</div>
+                <div class="sacred-symbol">✨</div>
+                <div class="sacred-symbol">🌟</div>
+                <div class="sacred-symbol">💫</div>
+                <div class="sacred-symbol">⚜️</div>
+            </div>
+            <!-- Om Symbol -->
+            <div class="om-symbol">ॐ</div>
+            <div class="click-instruction" id="clickInstruction">
+                ✨ దైవ చిత్రంపై క్లిక్ చేసి ప్రవేశించండి ✨
+            </div>
+        </div>
+    </div>
+
+    <!-- Pre-Main Content Devotional Effect Overlay -->
+    <div class="devotional-transition-overlay" id="devotionalTransitionOverlay">
+        <span id="transitionMessage">శ్రీ దుర్గాదేవి ఆశీస్సులు!</span>
+    </div>
+
+    <!-- Media Modal (for all images and videos) -->
+    <div class="gallery-modal" id="mediaModal">
+        <button class="modal-close" onclick="closeMediaModal()">✕</button>
+        <div class="modal-content">
+            <h2 class="modal-title-text" id="modalMediaTitle">పవిత్ర క్షణాల గ్యాలరీ</h2>
+            <div class="modal-media-grid" id="modalMediaGrid">
+                <!-- Content will be dynamically loaded here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin/Manage Gallery Modal -->
+    <div class="gallery-modal" id="adminModal">
+        <button class="modal-close" onclick="closeAdminModal()">✕</button>
+        <div class="modal-content">
+            <h2 class="modal-title-text" id="adminModalTitle">గ్యాలరీ నిర్వహణ</h2>
+            <div class="admin-controls">
+                <input type="text" id="mediaUrlInput" placeholder="మీడియా URL/స్థానిక మార్గం (ఉదా: img1.jpg)" class="admin-input">
+                <select id="mediaTypeSelect" class="admin-select">
+                    <option value="image">చిత్రం</option>
+                    <option value="video">వీడియో</option>
+                </select>
+                <input type="text" id="mediaTextInput" placeholder="మీడియా శీర్షిక (ఉదా: దుర్గాదేవి మూర్తి)" class="admin-input">
+                <button class="gallery-btn admin-add-btn" onclick="addMedia()">మీడియా జోడించు</button>
+            </div>
+            <div class="admin-media-list" id="adminMediaList">
+                <!-- Media items with delete buttons will be rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Language Selection in Main Content -->
+        <div class="language-selector">
+            <button class="lang-btn active" onclick="selectLanguage('telugu', event)">తెలుగు</button>
+            <button class="lang-btn" onclick="selectLanguage('english', event)">English</button>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="menuToggle">
+            ☰
+        </button>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul id="mobileMenuItems">
+                <li><a href="#media-gallery" onclick="closeMenu()">🖼️ గ్యాలరీ</a></li>
+                <li><a href="#events" onclick="closeMenu()">🎉 కార్యక్రమాలు</a></li>
+                <li><a href="#puja" onclick="closeMenu()">🎭 పూజలు</a></li>
+                <li><a href="#donors" onclick="closeMenu()">🙏 దాతలు</a></li>
+                <li><a href="#services" onclick="closeMenu()">🎊 ప్రత్యేక సేవలు</a></li>
+                <li><a href="#contact" onclick="closeMenu()">📞 సంప్రదింపులు</a></li>
+                <li><a href="#" onclick="openAdminModal(); closeMenu()">⚙️ గ్యాలరీ నిర్వహణ</a></li>
+            </ul>
+        </div>
+
+        <!-- Header -->
+        <header>
+            <h1 class="main-title" id="mainTitle">శ్రీ శ్రీ శ్రీ దుర్గాదేవి శరన్నవరాత్రి మహోత్సవములు</h1>
+            <p class="main-subtitle" id="mainSubtitle">కొరగాo గ్రామం • దైవ వేడుకలు • మహోత్సవములు</p>
+            <div class="festival-dates" id="festivalDates">
+                మహోత్సవములు: 22.09.2025 నుండి 02.10.2025 వరకు<br>
+                శ్రీ దుర్గాదేవి శరన్నవరాత్రి పవిత్ర వేడుకలు
+            </div>
+        </header>
+
+        <!-- Enhanced Marquee Section (Moved below header) -->
+        <div class="marquee-container">
+            <div class="marquee-content" id="marqueeContent">
+                <span class="marquee-text">శ్రీ దుర్గాదేవి శరన్నవరాత్రి మహోత్సవాలకు అందరికీ స్వాగతం! • ప్రతి రోజు ప్రత్యేక పూజలు మరియు సాంస్కృతిక కార్యక్రమాలు జరుగును • దాతలకు ప్రత్యేక కృతజ్ఞతలు • అందరూ విచ్చేసి అమ్మవారి ఆశీస్సులు పొందగలరు • </span>
+                <span class="marquee-text">శ్రీ దుర్గాదేవి శరన్నవరాత్రి మహోత్సవాలకు అందరికీ స్వాగతం! • ప్రతి రోజు ప్రత్యేక పూజలు మరియు సాంస్కృతిక కార్యక్రమాలు జరుగును • దాతలకు ప్రత్యేక కృతజ్ఞతలు • అందరూ విచ్చేసి అమ్మవారి ఆశీస్సులు పొందగలరు • </span>
+            </div>
+        </div>
+
+        <!-- Combined Media Gallery Section -->
+        <section id="media-gallery">
+            <h2 class="section-title" id="galleryTitle">📸🎬 పవిత్ర క్షణాల గ్యాలరీ</h2>
+            <div class="media-gallery-container">
+                <div class="media-slideshow-wrapper">
+                    <button class="gallery-nav-btn gallery-prev-btn" onclick="previousMediaSlide()" id="prevMediaBtn">⬅️</button>
+                    <div class="media-slideshow" id="mediaSlideshow">
+                        <!-- Slides will be dynamically loaded by JavaScript -->
+                    </div>
+                    <button class="gallery-nav-btn gallery-next-btn" onclick="nextMediaSlide()" id="nextMediaBtn">➡️</button>
+                </div>
+                
+                <div class="gallery-bottom-controls">
+                    <button class="gallery-btn" onclick="toggleMediaAutoplay()" id="stopViewBtn">⏹️ ఆపు</button>
+                    <button class="gallery-btn" onclick="showAllMedia()" id="showAllMediaBtn">🖼️ అన్ని మీడియా చూడండి</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events">
+            <h2 class="section-title" id="eventsTitle">🎉 వినోద కార్యక్రమాలు</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <h3 id="event1Title" class="event-card-title">🎪 వినోద ఆటలు</h3>
+                    <p id="event1Date" class="event-card-date">26-30/09/2025</p>
+                    <p id="event1Desc" class="event-card-desc">బెలూన్ గేమ్స్, కుర్చీ ఆటలు, మరియు ఇతర వినోద కార్యక్రమాలు పిల్లలు మరియు పెద్దలకు.</p>
+                </div>
+                <div class="event-card">
+                    <h3 id="event2Title" class="event-card-title">🍽️ ఆహార పోటీలు</h3>
+                    <p id="event2Date" class="event-card-date">27/09/2025</p>
+                    <p id="event2Desc" class="event-card-desc">వంట పోటీలు, తినే పోటీలు మరియు స్థానిక వంటకాల ప్రదర్శన.</p>
+                </div>
+                <div class="event-card">
+                    <h3 id="event3Title" class="event-card-title">🧠 క్విజ్ పోటీలు</h3>
+                    <p id="event3Date" class="event-card-date">28/09/2025</p>
+                    <p id="event3Desc" class="event-card-desc">మతపరమైన జ్ఞానం, సాధారణ జ్ఞానం మరియు స్థానిక చరిత్రపై క్విజ్ పోటీలు.</p>
+                </div>
+                <div class="event-card">
+                    <h3 id="event4Title" class="event-card-title">🪢 రస్సీ లాగు పోటీ</h3>
+                    <p id="event4Date" class="event-card-date">29/09/2025</p>
+                    <p id="event4Desc" class="event-card-desc">టగ్ ఆఫ్ వార్, రిలే రేసులు మరియు ఇతర బృంద క్రీడలు.</p>
+                </div>
+                <div class="event-card">
+                    <h3 id="event5Title" class="event-card-title">💃 నృత్య కార్యక్రమాలు</h3>
+                    <p id="event5Date" class="event-card-date">30/09/2025</p>
+                    <p id="event5Desc" class="event-card-desc">సాంప్రదాయ నృత్యాలు, ఫోక్ డ్యాన్స్ మరియు సాంస్కృతిక ప్రదర్శనలు.</p>
+                </div>
+                <div class="event-card">
+                    <h3 id="event6Title" class="event-card-title">🎯 వినోద క్రీడలు</h3>
+                    <p id="event6Date" class="event-card-date">01/10/2025</p>
+                    <p id="event6Desc" class="event-card-desc">లక్ష్య క్రీడలు, రింగ్ త్రో, మరియు ఇతర సాంప్రదాయ ఆటలు.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Puja Section -->
+        <section id="puja">
+            <h2 class="section-title" id="pujaTitle">🎭 పవిత్ర పూజలు మరియు వేడుకలు</h2>
+            <div class="puja-grid">
+                <div class="puja-card">
+                    <h3 id="puja1Title" class="puja-card-title">🌹 అమ్మవారి పంచామృత అభిషేకం</h3>
+                    <p id="puja1Date" class="puja-card-date">25/09/2025</p>
+                    <p id="puja1Desc" class="puja-card-desc">పవిత్ర పంచామృతంతో అమ్మవారికి ప్రత్యేక అభిషేకం. పాలు, తేనె, చక్కెర, దధి మరియు నెయ్యితో చేసే దివ్య స్నానం.</p>
+                </div>
+                <div class="puja-card">
+                    <h3 id="puja2Title" class="puja-card-title">🪔 సహస్ర దీపాలంకరణ సేవ</h3>
+                    <p id="puja2Date" class="puja-card-date">26/09/2025</p>
+                    <p id="puja2Desc" class="puja-card-desc">వేలాది దీపాలతో అమ్మవారి అలంకరణ. భక్తుల సమస్యలు తొలగించాలని ప్రార్థిస్తూ చేసే ప్రత్యేక సేవ.</p>
+                </div>
+                <div class="puja-card">
+                    <h3 id="puja3Title" class="puja-card-title">🔥 రుద్రాభిషేకం</h3>
+                    <p id="puja3Date" class="puja-card-date">29/09/2025</p>
+                    <p id="puja3Desc" class="puja-card-desc">రుద్ర మంత్రాలతో అమ్మవారికి ప్రత్యేక అభిషేకం. శక్తి మరియు శాంతి కోసం చేసే పవిత్ర ఆచారం.</p>
+                </div>
+                <div class="puja-card">
+                    <h3 id="puja4Title" class="puja-card-title">🎭 అమ్మవారి 108 రకముల హారతులు</h3>
+                    <p id="puja4Date" class="puja-card-date">30/09/2025</p>
+                    <p id="puja4Desc" class="puja-card-desc">108 రకాల పుష్పాలు, 108 రకాల నైవేద్యాలతో అమ్మవారికి ప్రత్యేక యారతులు. అత్యంత మంగళకరమైన దినం.</p>
+                </div>
+                <div class="puja-card">
+                    <h3 id="puja5Title" class="puja-card-title">🙏 నారాయణ సమారాధన</h3>
+                    <p id="puja5Date" class="puja-card-date">01/10/2025</p>
+                    <p id="puja5Desc" class="puja-card-desc">శ్రీ మహావిష్ణువు మరియు అమ్మవారికి సంయుక్త ఆరాధన. లక్ష్మీ నారాయణుల కృపా కటాక్షం కోసం.</p>
+                </div>
+                <div class="puja-card">
+                    <h3 id="puja6Title" class="puja-card-title">🚩 అమ్మవారి తిరువీధి మరియు నిమర్జనం</h3>
+                    <p id="puja6Date" class="puja-card-date">02/10/2025</p>
+                    <p id="puja6Desc" class="puja-card-desc">గొప్ప శోభాయాత్రతో అమ్మవారి తిరువీధి, తర్వాత పవిత్ర నిమర్జనం. మహోత్సవాల సమాప్తి వేడుక.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donors Section -->
+        <section id="donors">
+            <h2 class="section-title" id="donorsTitle">🙏 మా ఆశీర్వదించబడిన దాతలు</h2>
+            
+            <!-- Special Donor Card for Vegraya Datha -->
+            <div class="special-donor-card">
+                <h2 class="special-donor-title" id="specialDonorTitle">👑 ప్రధాన దాత</h2>
+                <h3 id="specialDonorName" style="font-size: 2rem; color: #FF4500; margin-bottom: 1.5rem;">విగ్రహ దాత</h3>
+                <p id="specialDonorDesc" style="font-size: 1.3rem; line-height: 1.6; margin-bottom: 2rem;">
+                    శ్రీ దుర్గాదేవి శరన్నవరాత్రి మహోత్సవాలకు అత్యధిక సహకారం అందించిన గొప్ప దాత. వారి దాతృత్వం మరియు భక్తి వల్ల ఈ పవిత్ర వేడుకలు గొప్పగా జరుగుతున్నాయి.
+                </p>
+                <div class="donor-benefit-item">
+                    <p style="font-size: 1.1rem;"><strong>🙏 ప్రత్యేక పూజ</strong></p>
+                </div>
+            </div>
+
+            <!-- Community Donors -->
+            <div class="donor-card">
+                <h3 id="communityDonorsTitle" style="color: #FFD700; font-size: 2rem; margin-bottom: 2rem;">🏘️ సమాజ దాతలు</h3>
+                <h4 id="yuvajanaTitle" style="color: #FF4500; font-size: 1.6rem; margin-bottom: 1.5rem;">శ్రీ సీతారామ యువజన సంఘం</h4>
+                <p id="yuvajanaDesc" style="font-size: 1.2rem; margin-bottom: 2rem; line-height: 1.6;">
+                    మహోత్సవాల విజయవంతమైన నిర్వహణకు అత్యధిక సహకారం అందించిన గొప్ప యువజన సంఘం. వారి సేవా భావన మరియు భక్తి అనుకరణీయం.
+                </p>
+                <h4 id="villagersTitle" style="color: #FF4500; font-size: 1.6rem; margin-bottom: 1.5rem;">కొరగం గ్రామ పురజనులు</h4>
+                <p id="villagersDesc" style="font-size: 1.2rem; line-height: 1.6;">
+                    మా గ్రామంలోని ప్రతి కుటుంబం తమ వంతు సహకారం అందించి ఈ పవిత్ర మహోత్సవాలను గొప్పగా జరిపించడంలో భాగస్వామ్యం వహించారు.
+                </p>
+                <div class="donor-benefits-grid">
+                    <div class="donor-benefit-item">
+                        <p style="font-size: 1rem;"><strong>🤝 సమాజ సేవ</strong></p>
+                    </div>
+                    <div class="donor-benefit-item">
+                        <p style="font-size: 1rem;"><strong>🎭 కార్యక్రమ నిర్వహణ</strong></p>
+                    </div>
+                    <div class="donor-benefit-item">
+                        <p style="font-size: 1rem;"><strong>🍛 అన్నదానం</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section (New - Above Footer) -->
+        <section id="services">
+            <h2 class="section-title" id="servicesTitle">🎊 ప్రత్యేక సేవలు</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 id="pantuluTitle" class="service-card-title">🧙‍♂️ పంతులు గారు</h3>
+                    <h4 id="pantuluName" class="service-card-name">మావుదూరి కృష్ణరావు గారు</h4>
+                    <p id="pantuluDesc" class="service-card-desc">అన్ని పవిత్ర పూజలు మరియు మంత్రోచ్చారణలకు అనుభవజ్ఞుడైన పండిత్యం గల పంతులు గారు.</p>
+                    <div class="service-icon">🕉️</div>
+                </div>
+                <div class="service-card">
+                    <h3 id="decorationTitle" class="service-card-title">🎨 అలంకరణ సేవలు</h3>
+                    <h4 id="decorationName" class="service-card-name">డెకొరేషన్ & లైట్ సెట్టింగ్</h4>
+                    <p id="decorationDesc" class="service-card-desc">మహోత్సవాలకు అందమైన అలంకరణలు మరియు దీపాలంకరణ సేవలు అందించే నిపుణులు.</p>
+                    <div class="service-icon">💡</div>
+                </div>
+                <div class="service-card">
+                    <h3 id="lightingTitle" class="service-card-title">💡 లైటింగ్ సప్లైర్స్</h3>
+                    <h4 id="lightingName" class="service-card-name">అయ్యప్ప సప్లైర్స్</h4>
+                    <p id="lightingDesc" class="service-card-desc">మహోత్సవాలకు అవసరమైన అన్ని రకాల లైటింగ్ మరియు ఎలక్ట్రికల్ సామగ్రి సరఫరా.</p>
+                    <div class="service-icon">⚡</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="section-title" id="contactTitle">📞 సంప్రదింపు వివరాలు</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3 id="contact1Name" class="contact-card-title">శేషనాపూరి లక్ష్మీ ప్రసాద్</h3>
+                    <p id="contact1Designation" class="contact-card-desc"><strong>కార్యనిర్వాహకుడు</strong></p>
+                    <p id="contact1Phone" class="contact-card-desc">📞 9954747693</p>
+                </div>
+                <div class="contact-card">
+                    <h3 id="contact2Name" class="contact-card-title">దేవాది జన</h3>
+                    <p id="contact2Designation" class="contact-card-desc"><strong>సమన్వయకర్త</strong></p>
+                    <p id="contact2Phone" class="contact-card-desc">📞 8374025030</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p id="footerText">&copy; 2025 శ్రీ దుర్గాదేవి శరన్నవరాత్రి మహోత్సవములు, కొరగాo. అన్ని హక్కులు రిజర్వు చేయబడ్డాయి.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
