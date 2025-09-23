@@ -7,55 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Background Devotional Audio (Plays only on loading screen) -->
-    <audio id="devotionalAudio" loop preload="auto">
-        <source src="bgm.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-    <!-- Loading Screen with Divine Image -->
-    <div class="loading-screen" id="loadingScreen">
-        <!-- Enhanced Floating Particles -->
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        
-        <div class="divine-image-container" id="divineImageContainer">
-            <div class="divine-main-image" id="divineMainImage">
-                <!-- Sacred Symbols Around Image -->
-                <div class="sacred-symbol">🔱</div>
-                <div class="sacred-symbol">🪔</div>
-                <div class="sacred-symbol">🌺</div>
-                <div class="sacred-symbol">📿</div>
-                <div class="sacred-symbol">🕉️</div>
-                <div class="sacred-symbol">🚩</div>
-                <div class="sacred-symbol">🌸</div>
-                <div class="sacred-symbol">🔔</div>
-                <div class="sacred-symbol">✨</div>
-                <div class="sacred-symbol">🌟</div>
-                <div class="sacred-symbol">💫</div>
-                <div class="sacred-symbol">⚜️</div>
-            </div>
-            <!-- Om Symbol -->
-            <div class="om-symbol">ॐ</div>
-            <div class="click-instruction" id="clickInstruction">
-                ✨ దైవ చిత్రంపై క్లిక్ చేసి ప్రవేశించండి ✨
-            </div>
-        </div>
-    </div>
-
-    <!-- Pre-Main Content Devotional Effect Overlay -->
-    <div class="devotional-transition-overlay" id="devotionalTransitionOverlay">
-        <span id="transitionMessage">శ్రీ దుర్గాదేవి ఆశీస్సులు!</span>
-    </div>
-
     <!-- Media Modal (for all images and videos) -->
     <div class="gallery-modal" id="mediaModal">
         <button class="modal-close" onclick="closeMediaModal()">✕</button>
@@ -63,6 +14,19 @@
             <h2 class="modal-title-text" id="modalMediaTitle">పవిత్ర క్షణాల గ్యాలరీ</h2>
             <div class="modal-media-grid" id="modalMediaGrid">
                 <!-- Content will be dynamically loaded here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Puja Details Modal -->
+    <div class="puja-modal" id="pujaModal">
+        <button class="modal-close" onclick="closePujaModal()">✕</button>
+        <div class="modal-content">
+            <div class="puja-modal-header">
+                <h2 class="puja-modal-title" id="pujaModalTitle">పూజ వివరాలు</h2>
+            </div>
+            <div class="puja-modal-body" id="pujaModalBody">
+                <!-- Puja details will be loaded here -->
             </div>
         </div>
     </div>
@@ -87,7 +51,7 @@
         </div>
     </div>
 
-    <!-- Main Content -->
+    <!-- Main Content - Directly Visible -->
     <div class="main-content" id="mainContent">
         <!-- Language Selection in Main Content -->
         <div class="language-selector">
@@ -131,20 +95,42 @@
             </div>
         </div>
 
-        <!-- Combined Media Gallery Section -->
+        <!-- WhatsApp Style Gallery Section -->
         <section id="media-gallery">
             <h2 class="section-title" id="galleryTitle">📸🎬 పవిత్ర క్షణాల గ్యాలరీ</h2>
-            <div class="media-gallery-container">
-                <div class="media-slideshow-wrapper">
-                    <button class="gallery-nav-btn gallery-prev-btn" onclick="previousMediaSlide()" id="prevMediaBtn">⬅️</button>
-                    <div class="media-slideshow" id="mediaSlideshow">
-                        <!-- Slides will be dynamically loaded by JavaScript -->
+            
+            <!-- WhatsApp Style Status Gallery -->
+            <div class="whatsapp-gallery-container">
+                <div class="status-stories-row" id="statusStoriesRow">
+                    <!-- Stories will be dynamically loaded here -->
+                </div>
+                
+                <!-- Main Status Viewer -->
+                <div class="status-viewer" id="statusViewer">
+                    <div class="status-header">
+                        <div class="status-progress-bars" id="statusProgressBars">
+                            <!-- Progress bars will be added dynamically -->
+                        </div>
+                        <div class="status-info">
+                            <span class="status-title" id="currentStatusTitle">గ్యాలరీ</span>
+                            <span class="status-time" id="currentStatusTime">ఇప్పుడు</span>
+                        </div>
                     </div>
-                    <button class="gallery-nav-btn gallery-next-btn" onclick="nextMediaSlide()" id="nextMediaBtn">➡️</button>
+                    
+                    <div class="status-content" id="statusContent">
+                        <div class="status-slide active" id="currentStatusSlide">
+                            <!-- Current media will be displayed here -->
+                        </div>
+                    </div>
+                    
+                    <div class="status-controls">
+                        <button class="status-prev" onclick="previousStatus()" id="statusPrevBtn">‹</button>
+                        <button class="status-next" onclick="nextStatus()" id="statusNextBtn">›</button>
+                    </div>
                 </div>
                 
                 <div class="gallery-bottom-controls">
-                    <button class="gallery-btn" onclick="toggleMediaAutoplay()" id="stopViewBtn">⏹️ ఆపు</button>
+                    <button class="gallery-btn" onclick="toggleStatusAutoplay()" id="stopViewBtn">⏹️ ఆపు</button>
                     <button class="gallery-btn" onclick="showAllMedia()" id="showAllMediaBtn">🖼️ అన్ని మీడియా చూడండి</button>
                 </div>
             </div>
@@ -187,39 +173,57 @@
             </div>
         </section>
 
-        <!-- Puja Section -->
+        <!-- Puja Section with Clickable Cards -->
         <section id="puja">
             <h2 class="section-title" id="pujaTitle">🎭 పవిత్ర పూజలు మరియు వేడుకలు</h2>
             <div class="puja-grid">
-                <div class="puja-card">
+                <div class="puja-card clickable-puja" data-puja-id="puja1" onclick="openPujaDetails('puja1')">
                     <h3 id="puja1Title" class="puja-card-title">🌹 అమ్మవారి పంచామృత అభిషేకం</h3>
                     <p id="puja1Date" class="puja-card-date">25/09/2025</p>
                     <p id="puja1Desc" class="puja-card-desc">పవిత్ర పంచామృతంతో అమ్మవారికి ప్రత్యేక అభిషేకం. పాలు, తేనె, చక్కెర, దధి మరియు నెయ్యితో చేసే దివ్య స్నానం.</p>
+                    <div class="puja-card-footer">
+                        <span class="click-hint">పూజా సామాగ్రి చూడండి →</span>
+                    </div>
                 </div>
-                <div class="puja-card">
+                <div class="puja-card clickable-puja" data-puja-id="puja2" onclick="openPujaDetails('puja2')">
                     <h3 id="puja2Title" class="puja-card-title">🪔 సహస్ర దీపాలంకరణ సేవ</h3>
                     <p id="puja2Date" class="puja-card-date">26/09/2025</p>
                     <p id="puja2Desc" class="puja-card-desc">వేలాది దీపాలతో అమ్మవారి అలంకరణ. భక్తుల సమస్యలు తొలగించాలని ప్రార్థిస్తూ చేసే ప్రత్యేక సేవ.</p>
+                    <div class="puja-card-footer">
+                        <span class="click-hint">పూజా సామాగ్రి చూడండి →</span>
+                    </div>
                 </div>
-                <div class="puja-card">
+                <div class="puja-card clickable-puja" data-puja-id="puja3" onclick="openPujaDetails('puja3')">
                     <h3 id="puja3Title" class="puja-card-title">🔥 రుద్రాభిషేకం</h3>
                     <p id="puja3Date" class="puja-card-date">29/09/2025</p>
                     <p id="puja3Desc" class="puja-card-desc">రుద్ర మంత్రాలతో అమ్మవారికి ప్రత్యేక అభిషేకం. శక్తి మరియు శాంతి కోసం చేసే పవిత్ర ఆచారం.</p>
+                    <div class="puja-card-footer">
+                        <span class="click-hint">పూజా సామాగ్రి చూడండి →</span>
+                    </div>
                 </div>
-                <div class="puja-card">
+                <div class="puja-card clickable-puja" data-puja-id="puja4" onclick="openPujaDetails('puja4')">
                     <h3 id="puja4Title" class="puja-card-title">🎭 అమ్మవారి 108 రకముల హారతులు</h3>
                     <p id="puja4Date" class="puja-card-date">30/09/2025</p>
                     <p id="puja4Desc" class="puja-card-desc">108 రకాల పుష్పాలు, 108 రకాల నైవేద్యాలతో అమ్మవారికి ప్రత్యేక యారతులు. అత్యంత మంగళకరమైన దినం.</p>
+                    <div class="puja-card-footer">
+                        <span class="click-hint">పూజా సామాగ్రి చూడండి →</span>
+                    </div>
                 </div>
-                <div class="puja-card">
+                <div class="puja-card clickable-puja" data-puja-id="puja5" onclick="openPujaDetails('puja5')">
                     <h3 id="puja5Title" class="puja-card-title">🙏 నారాయణ సమారాధన</h3>
                     <p id="puja5Date" class="puja-card-date">01/10/2025</p>
                     <p id="puja5Desc" class="puja-card-desc">శ్రీ మహావిష్ణువు మరియు అమ్మవారికి సంయుక్త ఆరాధన. లక్ష్మీ నారాయణుల కృపా కటాక్షం కోసం.</p>
+                    <div class="puja-card-footer">
+                        <span class="click-hint">పూజా సామాగ్రి →</span>
+                    </div>
                 </div>
-                <div class="puja-card">
+                <div class="puja-card clickable-puja" data-puja-id="puja6" onclick="openPujaDetails('puja6')">
                     <h3 id="puja6Title" class="puja-card-title">🚩 అమ్మవారి తిరువీధి మరియు నిమర్జనం</h3>
                     <p id="puja6Date" class="puja-card-date">02/10/2025</p>
                     <p id="puja6Desc" class="puja-card-desc">గొప్ప శోభాయాత్రతో అమ్మవారి తిరువీధి, తర్వాత పవిత్ర నిమర్జనం. మహోత్సవాల సమాప్తి వేడుక.</p>
+                    <div class="puja-card-footer">
+                        <span class="click-hint">పూజా సామాగ్రి →</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -231,6 +235,30 @@
             <!-- Special Donor Card for Vegraya Datha -->
             <div class="special-donor-card">
                 <h2 class="special-donor-title" id="specialDonorTitle">👑 ప్రధాన దాత</h2>
+                <div class="donor-profile-container">
+                    <!-- Mobile View Profile -->
+                    <div class="donor-profile-mobile">
+                        <div class="donor-profile-pic">
+                            <img src="profile.jpg" alt="విగ్రహ దాత" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #FFD700;">
+                        </div>
+                        <div class="donor-names">
+                            <h3 style="color: #FF4500; margin: 10px 0;">బురాదా వాసుదేవరావు</h3>
+                            <h3 style="color: #FF4500; margin: 10px 0;">రమ దంపతులు</h3>
+                        </div>
+                    </div>
+                    
+                    <!-- Desktop View Profile -->
+                    <div class="donor-profile-desktop">
+                        <div class="donor-profile-pic">
+                            <img src="profile.jpg" alt="విగ్రహ దాత" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid #FFD700;">
+                        </div>
+                        <div class="donor-names">
+                            <h3 style="color: #FF4500; margin: 15px 0; font-size: 1.8rem;">బురాదా వాసుదేవరావు</h3>
+                            <h3 style="color: #FF4500; margin: 15px 0; font-size: 1.8rem;">రమ దంపతులు</h3>
+                        </div>
+                    </div>
+                </div>
+                
                 <h3 id="specialDonorName" style="font-size: 2rem; color: #FF4500; margin-bottom: 1.5rem;">విగ్రహ దాత</h3>
                 <p id="specialDonorDesc" style="font-size: 1.3rem; line-height: 1.6; margin-bottom: 2rem;">
                     శ్రీ దుర్గాదేవి శరన్నవరాత్రి మహోత్సవాలకు అత్యధిక సహకారం అందించిన గొప్ప దాత. వారి దాతృత్వం మరియు భక్తి వల్ల ఈ పవిత్ర వేడుకలు గొప్పగా జరుగుతున్నాయి.
@@ -307,7 +335,7 @@
             </div>
         </section>
     </div>
-
+     
     <!-- Footer -->
     <footer id="footer">
         <p id="footerText">&copy; 2025 శ్రీ దుర్గాదేవి శరన్నవరాత్రి మహోత్సవములు, కొరగాo. అన్ని హక్కులు రిజర్వు చేయబడ్డాయి.</p>
@@ -316,3 +344,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
