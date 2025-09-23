@@ -1,13 +1,9 @@
-// Language content object with fixed mobile menu names
+// Language content object with puja details
 const content = {
     telugu: {
-        // Loading Screen
-        clickInstruction: "✨ దైవ చిత్రంపై క్లిక్ చేసి ప్రవేశించండి ✨",
-        transitionMessage: "శ్రీ దుర్గాదేవి ఆశీస్సులు!",
-        
         // Header
         mainTitle: "శ్రీ శ్రీ శ్రీ దుర్గాదేవి శరన్నవరాత్రి మహోత్సవములు",
-        mainSubtitle: "కొరగం గ్రామం • దైవ వేడుకలు • మహోత్సవములు",
+        mainSubtitle: "కొరగాo గ్రామం • దైవ వేడుకలు • మహోత్సవములు",
         festivalDates: "మహోత్సవములు: 22.09.2025 నుండి 02.10.2025 వరకు<br>శ్రీ దుర్గాదేవి శరన్నవరాత్రి పవిత్ర వేడుకలు",
         
         // Mobile Menu - Fixed names
@@ -86,16 +82,23 @@ const content = {
         
         // Media Gallery Section
         galleryTitle: "📸🎬 పవిత్ర క్షణాల గ్యాలరీ",
-        media1Text: "",
+        media1Text: " ",
         media2Text: "",
         media3Text: "",
         media4Text: "",
         media5Text: "",
-        media6Text:"",
+        media6Text: "",
         media7Text: "",
         media8Text: "",
-        prevMediaBtn: "⬅️",
-        nextMediaBtn: "➡️",
+        media10Text:"",
+        media11Text:"",
+        media12ext:"",
+        media13ext:"",
+        media14ext:"",
+        media15ext:"",
+        media16ext:"",
+        prevMediaBtn: "‹",
+        nextMediaBtn: "›",
         showAllMediaBtn: "🖼️ అన్ని మీడియా చూడండి",
         stopViewBtn: "⏹️ ఆపు",
         
@@ -119,15 +122,14 @@ const content = {
         contact2Name: "దేవాది జన",
         contact2Designation: "సమన్వయకర్త",
         contact2Phone: "📞 8374025030",
+
+        // Puja Modal
+        pujaModalTitle: "పూజ వివరాలు",
        
         // Footer
         footerText: "&copy; 2025 శ్రీ దుర్గాదేవి శరన్నవరాత్రి మహోత్సవములు, కొరగాo. అన్ని హక్కులు రిజర్వు చేయబడ్డాయి."
     },
     english: {
-        // Loading Screen
-        clickInstruction: "✨ Click on the Divine Image to Enter ✨",
-        transitionMessage: "Blessings of Sri Durgadevi!",
-        
         // Header
         mainTitle: "Sri Sri Sri Durgadevi Sharannavaratri Mahotsavalu",
         mainSubtitle: "Koragam Village • Divine Celebrations • Grand Festivals",
@@ -209,16 +211,24 @@ const content = {
         
         // Media Gallery Section
         galleryTitle: "📸🎬 Sacred Moments Gallery",
-        media1Text: "🏛️ Durgadevi Idol Installation",
-        media2Text: "🌹 Panchamrita Abhishekam Ceremony",
-        media3Text: "🪔 Sahasra Deepalankaran Seva",
-        media4Text: "🔥 Rudrabhishekam & Homam",
-        media5Text: "🎭 108 Varieties Aarathulu Ceremony",
-        media6Text: "🙏 Narayana Samaradhana",
-        media7Text: "🚩 Goddess Procession",
-        media8Text: "🌊 Sacred Immersion Ceremony",
-        prevMediaBtn: "⬅️",
-        nextMediaBtn: "➡️",
+        media1Text: " ",
+        media2Text: "",
+        media3Text: "",
+        media4Text: "",
+        media5Text: "",
+        media6Text: "",
+        media7Text: "",
+        media8Text: "",
+        media9Text: "",
+        media10Text: "",
+        media11Text: "",
+        media12Text: "",
+        media13Text: "",
+        media14Text: "",
+        media15Text: "",
+        media16Text: "",
+        prevMediaBtn: "‹",
+        nextMediaBtn: "›",
         showAllMediaBtn: "🖼️ View All Media",
         stopViewBtn: "⏹️ Stop",
         
@@ -242,10 +252,246 @@ const content = {
         contact2Name: "Jana Devadi",
         contact2Designation: "Coordinator",
         contact2Phone: "📞 8374025030",
-        
 
+        // Puja Modal
+        pujaModalTitle: "Puja Details",
+        
         // Footer
         footerText: "&copy; 2025 Sri Durgadevi Sharannavaratri Mahotsavalu, Koragam. All rights reserved."
+    }
+};
+
+// Puja details data
+const pujaDetails = {
+    puja1: {
+        telugu: {
+            title: "🌹 అమ్మవారి పంచామృత అభిషేకం",
+            date: "25/09/2025",
+            time: "ఉదయం 6:00 - 8:00",
+            description: "పవిత్ర పంచామృతంతో అమ్మవారికి ప్రత్యేక అభిషేకం చేస్తారు. ఈ అభిషేకం అమ్మవారి కృపను పొందడానికి చాలా ముఖ్యమైనది.",
+            materials: [
+                "🥛 పాలు - 2 లీటర్లు",
+                "🍯 తేనె - 1/2 కిలో",
+                "🍬 చక్కెర - 1 కిలోలు", 
+                "🧈 దధి - 1 కిలోలు",
+                "🧈 నెయ్యి - 1/2 కిలో",
+                "🌹 గులాబీ రేకులు",
+                "🌿 తులసి ఆకులు",
+                "🥥 కొబ్బరి - 21 కాయలు"
+            ],
+            process: "మొదట అమ్మవారిని పవిత్ర జలంతో స్నానం చేయించి, తర్వాత పంచామృతంతో అభిషేకం చేస్తారు. ప్రతి పదార్థాన్ని ప్రత్యేకంగా అర్పిస్తూ మంత్రోచ్చారణ చేస్తారు.",
+            benefits: "ఈ పూజ చేయడం వల్ల ఆరోగ్యం, ధనం, సంతానం, విద్య మరియు మోక్షం లభిస్తుంది. అమ్మవారి పూర్ణ కృప లభిస్తుంది.",
+            mantras: "ఓం దుర్గాయై నమః, ఓం అమ్బికాయై నమః, ఓం చండికాయై నమః"
+        },
+        english: {
+            title: "🌹 Goddess Panchamrita Abhishekam",
+            date: "25/09/2025", 
+            time: "Morning 6:00 - 8:00",
+            description: "Special abhishekam performed for the Goddess with sacred Panchamrita. This abhishekam is very important to receive the blessings of the Mother Divine.",
+            materials: [
+                "🥛 Milk - 3 liters",
+                "🍯 Honey - 1/2 kg",
+                "🍬 Sugar - 2 kg",
+                "🧈 Curd - 1 kg", 
+                "🧈 Ghee - 1/2 kg",
+                "🌹 Rose petals",
+                "🌿 Tulsi leaves",
+                "🥥 Coconuts - 21 pieces"
+            ],
+            process: "First, the Goddess is bathed with sacred water, then abhishekam is performed with Panchamrita. Each ingredient is offered separately while chanting mantras.",
+            benefits: "This puja brings health, wealth, children, education and salvation. Complete grace of the Divine Mother is obtained.",
+            mantras: "Om Durgayai Namah, Om Ambikayai Namah, Om Chandikayai Namah"
+        }
+    },
+    puja2: {
+        telugu: {
+            title: "🪔 సహస్ర దీపాలంకరణ సేవ",
+            date: "26/09/2025",
+            time: "సాయంత్రం 6:00 - 9:00", 
+            description: "వేలాది దీపాలతో అమ్మవారి అలంకరణ చేస్తారు. ఈ సేవ చేయడం వల్ల అన్ని చీకటులు తొలగిపోతాయి.",
+            materials: [
+                "🪔 దీపాలు - 1008",
+                "🛢️ నూనె - 3 లీటర్లు", 
+                "🧵 వత్తులు - 2000",
+                "🌼 పూలు - వివిధ రకాలు",
+                "🕯️ కర్పూరం - 500 గ్రాములు",
+                "🌾 అక్షతలు - 2 కిలోలు",
+                "🍌 పండ్లు - వివిధ రకాలు"
+            ],
+            process: "అమ్మవారి చుట్టూ 1008 దీపాలను వెలిగించి, ప్రత్యేక మంత్రాలతో ఆరతి చేస్తారు. ప్రతి దీపం వెలిగించేటప్పుడు అమ్మవారి నామాలను జపిస్తారు.",
+            benefits: "జీవితంలో వెలుగు, జ్ఞానం, శాంతి, సంపద మరియు ఆనందం లభిస్తుంది. అన్ని రకాల భయాలు తొలగిపోతాయి.",
+            mantras: "ఓం జ్యోతిస్వరూపాయై నమః, దీపజ్యోతి పరబ్రహ్మ"
+        },
+        english: {
+            title: "🪔 Sahasra Deepalankaran Seva",
+            date: "26/09/2025",
+            time: "Evening 6:00 - 9:00",
+            description: "Decoration of the Goddess with thousands of lamps. This service removes all darkness from life.",
+            materials: [
+                "🪔 Lamps - 1008",
+                "🛢️ Oil - 3 liters",
+                "🧵 Wicks - 2000",
+                "🌼 Flowers - various types",
+                "🕯️ Camphor - 500 grams", 
+                "🌾 Rice - 2 kg",
+                "🍌 Fruits - various types"
+            ],
+            process: "1008 lamps are lit around the Goddess and special arati is performed with mantras. While lighting each lamp, the names of the Goddess are chanted.",
+            benefits: "Light, knowledge, peace, wealth and joy are obtained in life. All kinds of fears are removed.",
+            mantras: "Om Jyotiswarupayai Namah, Deepajyoti Parabrahma"
+        }
+    },
+    puja3: {
+        telugu: {
+            title: "🔥 రుద్రాభిషేకం",
+            date: "29/09/2025",
+            time: "ఉదయం 5:00 - 7:00",
+            description: "రుద్ర మంత్రాలతో అమ్మవారికి ప్రత్యేక అభిషేకం. ఇది అత్యంత శక్తివంతమైన పూజ.",
+            materials: [
+                "🥥 కొబ్బరి నీరు - 21 కాయలు",
+                "🥛 పాలు - 3 లీటర్లు",
+                "🍯 తేనె - 1 కిలోలు",
+                "🌿 బిల్వ పత్రాలు - 1008",
+                "🌹 ఎర్ర పూలు",
+                "🔥 హోమ సామగ్రి",
+                "📿 రుద్రాక్ష మాలలు"
+            ],
+            process: "రుద్రం పఠనంతో పాటు అభిషేకం చేస్తారు. ప్రత్యేక హోమం కూడా నిర్వహిస్తారు.",
+            benefits: "శత్రు నివారణ, రోగ నివారణ, శక్తి వృద్ధి, మానసిక శాంతి లభిస్తుంది.",
+            mantras: "ఓం నమః శివాయ, రుద్రం చమకం, మృత్యుంజయ మంత్రం"
+        },
+        english: {
+            title: "🔥 Rudrabhishekam", 
+            date: "29/09/2025",
+            time: "Morning 5:00 - 7:00",
+            description: "Special abhishekam to the Goddess with Rudra mantras. This is a very powerful puja.",
+            materials: [
+                "🥥 Coconut water - 21 coconuts",
+                "🥛 Milk - 3 liters", 
+                "🍯 Honey - 1 kg",
+                "🌿 Bilva leaves - 1008",
+                "🌹 Red flowers",
+                "🔥 Homa materials",
+                "📿 Rudraksha malas"
+            ],
+            process: "Abhishekam is performed along with Rudram chanting. Special homa is also conducted.",
+            benefits: "Enemy removal, disease removal, strength increase, mental peace is obtained.",
+            mantras: "Om Namah Shivaya, Rudram Chamakam, Mrityunjaya Mantra"
+        }
+    },
+    puja4: {
+        telugu: {
+            title: "🎭 అమ్మవారి 108 రకముల హారతులు",
+            date: "30/09/2025", 
+            time: "సాయంత్రం 5:00 - 8:00",
+            description: "108 రకాల పుష్పాలు మరియు నైవేద్యాలతో అమ్మవారికి ప్రత్యేక ఆరాధన.",
+            materials: [
+                "🌸 108 రకాల పుష్పాలు",
+                "🍯 108 రకాల నైవేద్యాలు", 
+                "🪔 దీపాలు - 108",
+                "🌾 అక్షతలు - 3 కిలోలు",
+                "🥥 కొబ్బరికాయలు - 108",
+                "🍌 అరటిపండ్లు - 108",
+                "🧈 నెయ్యి - 2 కిలోలు"
+            ],
+            process: "108 రకాల పూలతో అలంకరించి, 108 రకాల నైవేద్యాలు అర్పిస్తారు. ప్రతి ఆరతికి ప్రత్యేక మంత్రం చెప్తారు.",
+            benefits: "అన్ని రకాల కోరికలు తీరుతాయి. సంపూర్ణ ఐశ్వర్యం లభిస్తుంది.",
+            mantras: "దుర్గా అష్టోత్తర శతనామావళి, లలిత సహస్రనామం"
+        },
+        english: {
+            title: "🎭 Goddess 108 Varieties Aarathulu",
+            date: "30/09/2025",
+            time: "Evening 5:00 - 8:00", 
+            description: "Special worship to the Goddess with 108 varieties of flowers and offerings.",
+            materials: [
+                "🌸 108 varieties of flowers",
+                "🍯 108 varieties of offerings",
+                "🪔 Lamps - 108", 
+                "🌾 Rice - 3 kg",
+                "🥥 Coconuts - 108",
+                "🍌 Bananas - 108", 
+                "🧈 Ghee - 2 kg"
+            ],
+            process: "Decorated with 108 types of flowers and 108 varieties of offerings are made. Special mantras are chanted for each arati.",
+            benefits: "All desires are fulfilled. Complete prosperity is obtained.",
+            mantras: "Durga Ashtottara Shatanamavali, Lalita Sahasranamam"
+        }
+    },
+    puja5: {
+        telugu: {
+            title: "🙏 నారాయణ సమారాధన",
+            date: "01/10/2025",
+            time: "ఉదయం 6:00 - 10:00",
+            description: "శ్రీ మహావిష్ణువు మరియు అమ్మవారికి సంయుక్త ఆరాధన.",
+            materials: [
+                "🌼 తుళసి మాలలు - 108",
+                "🌾 అక్షతలు - 1/2 కిలోలు",
+                "🍯 తేనె - 1/2 లీటర్లు",
+                "🥛 పాలు - 1 లీటర్లు", 
+                "🌹 పూలు - వివిధ రకాలు",
+                "🍌 పండ్లు - 11 రకాలు",
+                "💎 రత్నాలు - 9 రకాలు"
+            ],
+            process: "విష్ణు సహస్రనామం పఠనంతో పాటు లక్ష్మీ నారాయణ పూజ చేస్తారు.",
+            benefits: "ధన సంపద, సుఖ శాంతులు, దీర్ఘాయువు, మోక్షం లభిస్తుంది.",
+            mantras: "విష్ణు సహస్రనామం, లక్ష్మీ అష్టకం, నారాయణ మంత్రం"
+        },
+        english: {
+            title: "🙏 Narayana Samaradhana", 
+            date: "01/10/2025",
+            time: "Morning 6:00 - 10:00",
+            description: "Joint worship of Lord Mahavishnu and the Divine Mother.",
+            materials: [
+                "🌼 Tulsi garlands - 108",
+                "🌾 Rice - 1/2 kg",
+                "🍯 Honey - 1/2 liters",
+                "🥛 Milk - 1 liters",
+                "🌹 Flowers - various types", 
+                "🍌 Fruits - 11 varieties",
+                "💎 Gems - 9 types"
+            ],
+            process: "Lakshmi Narayana puja is performed along with Vishnu Sahasranama chanting.",
+            benefits: "Wealth, happiness, peace, longevity and salvation are obtained.",
+            mantras: "Vishnu Sahasranamam, Lakshmi Ashtakam, Narayana Mantra"
+        }
+    },
+    puja6: {
+        telugu: {
+            title: "🚩 అమ్మవారి తిరువీధి మరియు నిమర్జనం",
+            date: "02/10/2025",
+            time: "సాయంత్రం 6:30 - 12:00", 
+            description: "గొప్ప శోభాయాత్రతో అమ్మవారి తిరువీధి మరియు పవిత్ర నిమర్జనం.",
+            materials: [
+                "🚩 జెండాలు - వివిధ రంగులు",
+                "🎺 వాద్య యంత్రాలు",
+                "🌸 పూల వర్షం",
+                "🪔 దీపాలు - 2008", 
+                "🎭 సాంస్కృతిక కార్యక్రమాలు",
+                "🥥 కొబ్బరికాయలు - 501",
+                "🌾 అక్షతలు - 10 కిలోలు"
+            ],
+            process: "అమ్మవారిని అలంకరించి గ్రామం అంతా తిరువీధి తీసుకెళ్లి, చివరికి పవిత్ర నిమర్జనం చేస్తారు.",
+            benefits: "గ్రామం మొత్తానికి శుభం, శాంతి, సమృద్ధి లభిస్తుంది. అమ్మవారి శాశ్వత ఆశీర్వాదాలు.",
+            mantras: "జై అమ్మ, దుర్గా మాతా కీ జై, సర్వ మంగళ మాంగల్యే"
+        },
+        english: {
+            title: "🚩 Goddess Procession & Immersion",
+            date: "02/10/2025", 
+            time: "Evening 6:30 - 12:00",
+            description: "Grand procession of the Goddess and sacred immersion ceremony.",
+            materials: [
+                "🚩 Flags - various colors",
+                "🎺 Musical instruments", 
+                "🌸 Flower shower",
+                "🪔 Lamps - 2008",
+                "🎭 Cultural programs",
+                "🥥 Coconuts - 501",
+                "🌾 Rice - 10 kg"
+            ],
+            process: "The Goddess is decorated and taken in procession throughout the village, finally sacred immersion is performed.",
+            benefits: "The entire village gets auspiciousness, peace and prosperity. Eternal blessings of the Divine Mother.",
+            mantras: "Jai Amma, Durga Mata Ki Jai, Sarva Mangala Mangalye"
+        }
     }
 };
 
@@ -258,28 +504,38 @@ let slidesData = [
     { type: 'video', src: 'main.mp4', textKey: 'media5Text' }, 
     { type: 'video', src: 'vid.mp4', textKey: 'media6Text' }, 
     { type: 'video', src: 'vid3.mp4', textKey: 'media7Text' },
-    { type: 'video', src: 'vid4.mp4', textKey: 'media8Text' }
+    { type: 'video', src: 'bajana.mp4', textKey: 'media8Text' },
+    { type: 'video', src: 'puja.mp4', textKey: 'media9Text' },
+    { type: 'video', src: 'over.mp4', textKey: 'media10Text' },
+    { type: 'image', src: 'home.jpg', textKey: 'media11Text' },
+    { type: 'video', src: 'vid1.mp4', textKey: 'media12Text' },
+    { type: 'video', src: 'vid2.mp4', textKey: 'media13Text' },
+    { type: 'video', src: 'vid4.mp4', textKey: 'media14Text' },
+    { type: 'video', src: 'vid5.mp4', textKey: 'media15Text' },
+    { type: 'video', src: 'vid6.mp4', textKey: 'media16Text' }
 ];
 
 // Variables
 let currentLanguage = 'telugu';
-let currentMediaSlideIndex = 0;
-let isMediaAutoplay = false;
-let mediaAutoplayTimeout;
+let currentStatusIndex = 0;
+let isStatusAutoplay = false;
+let statusAutoplayTimeout;
 let currentGalleryVideo = null;
 
-const loadingScreen = document.getElementById('loadingScreen');
-const divineImageContainer = document.getElementById('divineImageContainer');
-const devotionalTransitionOverlay = document.getElementById('devotionalTransitionOverlay');
 const mainContent = document.getElementById('mainContent');
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 const mediaModal = document.getElementById('mediaModal');
 const adminModal = document.getElementById('adminModal');
-const mediaSlideshow = document.getElementById('mediaSlideshow');
+const pujaModal = document.getElementById('pujaModal');
+const statusStoriesRow = document.getElementById('statusStoriesRow');
+const statusViewer = document.getElementById('statusViewer');
+const statusContent = document.getElementById('statusContent');
+const statusProgressBars = document.getElementById('statusProgressBars');
+const currentStatusTitle = document.getElementById('currentStatusTitle');
+const currentStatusTime = document.getElementById('currentStatusTime');
 const modalMediaGrid = document.getElementById('modalMediaGrid');
 const adminMediaList = document.getElementById('adminMediaList');
-const devotionalAudio = document.getElementById('devotionalAudio');
 
 // --- Local Storage Management ---
 const LOCAL_STORAGE_KEY = 'durgadeviGalleryData';
@@ -292,44 +548,6 @@ function loadSlidesData() {
     const savedData = localStorage.getItem(LOCAL_STORAGE_KEY);
     if (savedData) {
         slidesData = JSON.parse(savedData);
-    }
-}
-
-// Audio Control Functions - FIXED: Play on loading page, stop on click
-function startBackgroundAudio() {
-    if (devotionalAudio) {
-        devotionalAudio.play().then(() => {
-            console.log('🎵 Background audio playing on loading screen (autoplay successful)');
-        }).catch(error => {
-            console.warn('🎵 Autoplay blocked by browser. Audio will attempt to play on first user interaction with the loading screen.');
-            // If autoplay is blocked, set up a one-time listener for any user interaction on the entire document
-            const enableAudioOnFirstInteraction = (event) => {
-                // Ensure we are still on the loading screen and audio is not already playing
-                if (loadingScreen.style.display !== 'none' && devotionalAudio.paused) {
-                    devotionalAudio.play().then(() => {
-                        console.log('🎵 Background audio started after first user interaction');
-                    }).catch(err => {
-                        console.error('Failed to play audio on interaction:', err);
-                    });
-                }
-                // Remove listeners after first interaction attempt
-                document.removeEventListener('click', enableAudioOnFirstInteraction);
-                document.removeEventListener('touchstart', enableAudioOnFirstInteraction);
-                document.removeEventListener('keydown', enableAudioOnFirstInteraction);
-            };
-            
-            document.addEventListener('click', enableAudioOnFirstInteraction, { once: true });
-            document.addEventListener('touchstart', enableAudioOnFirstInteraction, { once: true });
-            document.addEventListener('keydown', enableAudioOnFirstInteraction, { once: true });
-        });
-    }
-}
-
-function stopBackgroundAudio() {
-    if (devotionalAudio) {
-        devotionalAudio.pause();
-        devotionalAudio.currentTime = 0;
-        console.log('🔇 Background audio stopped on image click');
     }
 }
 
@@ -361,11 +579,7 @@ function updateContent() {
     updateNavigationItems();
     updateMediaControls();
 
-    if (document.getElementById('transitionMessage')) {
-        document.getElementById('transitionMessage').textContent = lang.transitionMessage;
-    }
-
-    renderMediaSlideshow();
+    renderStatusStories();
     renderModalMediaGrid();
     renderAdminMediaList();
 }
@@ -377,13 +591,13 @@ function updateNavigationItems() {
     const mobileNav = document.getElementById('mobileMenuItems');
     if (mobileNav) {
         mobileNav.innerHTML = `
-            <li><a href="#media-gallery" onclick="closeMenu()"> Gallery</a></li>
-            <li><a href="#events" onclick="closeMenu()"> Events</a></li>
-            <li><a href="#puja" onclick="closeMenu()"> Pujalu</a></li>
-            <li><a href="#donors" onclick="closeMenu()"> Donors</a></li>
-            <li><a href="#services" onclick="closeMenu()"> Services</a></li>
-            <li><a href="#contact" onclick="closeMenu()"> Contact</a></li>
-            <li><a href="#" onclick="openAdminModal(); closeMenu()"> Admin</a></li>
+            <li><a href="#media-gallery" onclick="closeMenu()">🖼️ Gallery</a></li>
+            <li><a href="#events" onclick="closeMenu()">🎉 Events</a></li>
+            <li><a href="#puja" onclick="closeMenu()">🎭 Pujalu</a></li>
+            <li><a href="#donors" onclick="closeMenu()">🙏 Donors</a></li>
+            <li><a href="#services" onclick="closeMenu()">🎊 Services</a></li>
+            <li><a href="#contact" onclick="closeMenu()">📞 Contact</a></li>
+            <li><a href="#" onclick="openAdminModal(); closeMenu()">⚙️ Admin</a></li>
         `;
     }
 }
@@ -395,7 +609,7 @@ function updateMediaControls() {
     const showAllBtn = document.getElementById('showAllMediaBtn');
 
     if (stopViewBtn) {
-        stopViewBtn.textContent = isMediaAutoplay ? lang.stopViewBtn : (currentLanguage === 'telugu' ? '▶️ ప్లే' : '▶️ Play');
+        stopViewBtn.textContent = isStatusAutoplay ? lang.stopViewBtn : (currentLanguage === 'telugu' ? '▶️ ప్లే' : '▶️ Play');
     }
     if (showAllBtn) showAllBtn.textContent = lang.showAllMediaBtn;
     if (document.getElementById('modalMediaTitle')) document.getElementById('modalMediaTitle').textContent = lang.modalMediaTitle;
@@ -409,68 +623,197 @@ function updateMediaControls() {
     if (document.querySelector('.admin-add-btn')) document.querySelector('.admin-add-btn').textContent = lang.adminAddBtn;
 }
 
-// Gallery Audio Management - Only play audio when in gallery section
-function manageGalleryAudio() {
-    const gallerySection = document.getElementById('media-gallery');
-    const isGalleryVisible = gallerySection && 
-        gallerySection.getBoundingClientRect().top <= window.innerHeight && 
-        gallerySection.getBoundingClientRect().bottom >= 0;
-
-    if (currentGalleryVideo) {
-        if (isGalleryVisible) {
-            currentGalleryVideo.muted = false;
-            currentGalleryVideo.volume = 0.3;
-        } else {
-            currentGalleryVideo.muted = true;
-        }
-    }
+// Puja Details Modal Functions
+function openPujaDetails(pujaId) {
+    const pujaData = pujaDetails[pujaId][currentLanguage];
+    const pujaModalBody = document.getElementById('pujaModalBody');
+    
+    pujaModalBody.innerHTML = `
+        <div class="puja-detail-section">
+            <h3 class="puja-detail-title">${pujaData.title}</h3>
+            <p class="puja-detail-content">${pujaData.description}</p>
+        </div>
+        
+        <div class="puja-timing">
+            <h4 style="color: #FFD700; margin-bottom: 0.5rem;">📅 ${currentLanguage === 'telugu' ? 'తేదీ మరియు సమయం' : 'Date and Time'}</h4>
+            <p style="font-size: 1.1rem;"><strong>${pujaData.date}</strong> - ${pujaData.time}</p>
+        </div>
+        
+        <div class="puja-detail-section">
+            <h4 class="puja-detail-title">🛍️ ${currentLanguage === 'telugu' ? 'అవసరమైన సామగ్రి' : 'Required Materials'}</h4>
+            <div class="puja-materials-grid">
+                ${pujaData.materials.map(material => `
+                    <div class="puja-material-item">${material}</div>
+                `).join('')}
+            </div>
+        </div>
+        
+        <div class="puja-detail-section">
+            <h4 class="puja-detail-title">🔄 ${currentLanguage === 'telugu' ? 'పూజా విధానం' : 'Puja Process'}</h4>
+            <p class="puja-detail-content">${pujaData.process}</p>
+        </div>
+        
+        <div class="puja-detail-section">
+            <h4 class="puja-detail-title">🌟 ${currentLanguage === 'telugu' ? 'పూజా ఫలితాలు' : 'Puja Benefits'}</h4>
+            <p class="puja-detail-content">${pujaData.benefits}</p>
+        </div>
+        
+        <div class="puja-detail-section">
+            <h4 class="puja-detail-title">🕉️ ${currentLanguage === 'telugu' ? 'ముఖ్య మంత్రాలు' : 'Main Mantras'}</h4>
+            <p class="puja-detail-content" style="font-style: italic; color: #FFD700;">${pujaData.mantras}</p>
+        </div>
+    `;
+    
+    pujaModal.classList.add('show');
+    document.body.style.overflow = 'hidden';
 }
 
-// Render Media Slideshow
-function renderMediaSlideshow() {
-    mediaSlideshow.innerHTML = '';
+function closePujaModal() {
+    pujaModal.classList.remove('show');
+    document.body.style.overflow = 'auto';
+}
+
+// WhatsApp Style Gallery Functions
+function renderStatusStories() {
+    statusStoriesRow.innerHTML = '';
     slidesData.forEach((slide, index) => {
-        const slideElement = document.createElement('div');
-        slideElement.classList.add('media-slide');
-
-        if (index === currentMediaSlideIndex) {
-            slideElement.classList.add('active');
-        }
-
+        const storyElement = document.createElement('div');
+        storyElement.classList.add('status-story');
+        storyElement.setAttribute('data-index', index);
+        
         if (slide.type === 'image') {
-            slideElement.style.backgroundImage = `url('${slide.src}')`;
+            storyElement.style.backgroundImage = `url('${slide.src}')`;
         } else if (slide.type === 'video') {
-            let mediaElement;
-            if (slide.src.includes('youtube.com')) {
-                mediaElement = document.createElement('iframe');
-                mediaElement.src = slide.src.includes('?') ? `${slide.src}&mute=1` : `${slide.src}?mute=1`; 
-                mediaElement.setAttribute('frameborder', '0');
-                mediaElement.setAttribute('allow', 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-                mediaElement.setAttribute('allowfullscreen', '');
-            } else {
-                mediaElement = document.createElement('video');
-                mediaElement.src = slide.src;
-                mediaElement.setAttribute('controls', '');
-                mediaElement.setAttribute('muted', '');
-                mediaElement.setAttribute('loop', '');
-                mediaElement.style.width = '100%';
-                mediaElement.style.height = '100%';
-                mediaElement.style.objectFit = 'cover';
-                
-                if (index === currentMediaSlideIndex) {
-                    currentGalleryVideo = mediaElement;
-                }
-            }
-            slideElement.appendChild(mediaElement);
+            // For video thumbnails, we'll use a placeholder or first frame
+            storyElement.style.backgroundImage = `url('${slide.src.replace('.mp4', '-thumb.jpg')}')`; // Fallback to thumbnail
+            storyElement.style.backgroundColor = '#333'; // Fallback color
         }
-
-        const span = document.createElement('span');
-        span.textContent = content[currentLanguage][slide.textKey];
-        slideElement.appendChild(span);
-
-        mediaSlideshow.appendChild(slideElement);
+        
+        storyElement.addEventListener('click', () => {
+            selectStatus(index);
+        });
+        
+        statusStoriesRow.appendChild(storyElement);
     });
-    showMediaSlide(currentMediaSlideIndex);
+    
+    // Initialize first status
+    selectStatus(0);
+}
+
+function selectStatus(index) {
+    currentStatusIndex = index;
+    clearTimeout(statusAutoplayTimeout);
+    
+    // Update progress bars
+    renderProgressBars();
+    
+    // Update status content
+    showStatus(index);
+    
+    // Mark story as viewed
+    const stories = document.querySelectorAll('.status-story');
+    stories[index].classList.add('viewed');
+    
+    // Update status info
+    const currentSlide = slidesData[index];
+    currentStatusTitle.textContent = content[currentLanguage][currentSlide.textKey];
+    currentStatusTime.textContent = currentLanguage === 'telugu' ? 'ఇప్పుడు' : 'now';
+}
+
+function renderProgressBars() {
+    statusProgressBars.innerHTML = '';
+    slidesData.forEach((slide, index) => {
+        const progressBar = document.createElement('div');
+        progressBar.classList.add('progress-bar');
+        
+        const progressFill = document.createElement('div');
+        progressFill.classList.add('progress-fill');
+        progressBar.appendChild(progressFill);
+        
+        if (index === currentStatusIndex) {
+            progressBar.classList.add('active');
+        }
+        
+        statusProgressBars.appendChild(progressBar);
+    });
+}
+
+function showStatus(index) {
+    const currentSlide = document.getElementById('currentStatusSlide');
+    currentSlide.innerHTML = '';
+    currentSlide.classList.remove('active');
+    
+    const slideData = slidesData[index];
+    
+    if (slideData.type === 'image') {
+        currentSlide.style.backgroundImage = `url('${slideData.src}')`;
+        
+        if (isStatusAutoplay) {
+            statusAutoplayTimeout = setTimeout(() => {
+                nextStatus();
+            }, 4000); // 4 seconds for images
+        }
+    } else if (slideData.type === 'video') {
+        let mediaElement;
+        if (slideData.src.includes('youtube.com')) {
+            mediaElement = document.createElement('iframe');
+            mediaElement.src = slideData.src;
+            mediaElement.setAttribute('frameborder', '0');
+            mediaElement.setAttribute('allow', 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+            mediaElement.setAttribute('allowfullscreen', '');
+        } else {
+            mediaElement = document.createElement('video');
+            mediaElement.src = slideData.src;
+            mediaElement.setAttribute('controls', '');
+            mediaElement.setAttribute('muted', '');
+            mediaElement.style.width = '100%';
+            mediaElement.style.height = '100%';
+            mediaElement.style.objectFit = 'cover';
+            
+            currentGalleryVideo = mediaElement;
+            mediaElement.play();
+            
+            // Auto-advance after video duration (or fixed time)
+            if (isStatusAutoplay) {
+                statusAutoplayTimeout = setTimeout(() => {
+                    nextStatus();
+                }, 8000); // 8 seconds for videos
+            }
+        }
+        currentSlide.appendChild(mediaElement);
+    }
+    
+    // Add caption
+    const caption = document.createElement('div');
+    caption.classList.add('media-caption');
+    caption.textContent = content[currentLanguage][slideData.textKey];
+    currentSlide.appendChild(caption);
+    
+    currentSlide.classList.add('active');
+}
+
+function nextStatus() {
+    currentStatusIndex = (currentStatusIndex + 1) % slidesData.length;
+    selectStatus(currentStatusIndex);
+}
+
+function previousStatus() {
+    currentStatusIndex = (currentStatusIndex - 1 + slidesData.length) % slidesData.length;
+    selectStatus(currentStatusIndex);
+}
+
+function toggleStatusAutoplay() {
+    if (isStatusAutoplay) {
+        clearTimeout(statusAutoplayTimeout);
+        isStatusAutoplay = false;
+        if (currentGalleryVideo) {
+            currentGalleryVideo.pause();
+        }
+    } else {
+        isStatusAutoplay = true;
+        selectStatus(currentStatusIndex);
+    }
+    updateMediaControls();
 }
 
 // Render Modal Media Grid
@@ -486,7 +829,7 @@ function renderModalMediaGrid() {
             let mediaElement;
             if (slide.src.includes('youtube.com')) {
                 mediaElement = document.createElement('iframe');
-                mediaElement.src = slide.src.replace('?enablejsapi=1&mute=1', '?enablejsapi=1'); 
+                mediaElement.src = slide.src;
                 mediaElement.setAttribute('frameborder', '0');
                 mediaElement.setAttribute('allow', 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
                 mediaElement.setAttribute('allowfullscreen', '');
@@ -509,90 +852,12 @@ function renderModalMediaGrid() {
     });
 }
 
-// Media Gallery Functions
-function showMediaSlide(index) {
-    const slides = document.querySelectorAll('#mediaSlideshow .media-slide');
-    
-    clearTimeout(mediaAutoplayTimeout);
-
-    slides.forEach(slide => {
-        slide.classList.remove('active');
-        const iframe = slide.querySelector('iframe');
-        const videoTag = slide.querySelector('video');
-        
-        if (iframe && iframe.contentWindow) {
-            if (iframe.src.includes('youtube.com')) {
-                iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-            }
-        } else if (videoTag) {
-            videoTag.pause();
-            videoTag.muted = true;
-        }
-    });
-    
-    currentGalleryVideo = null;
-    
-    if (slides[index]) {
-        slides[index].classList.add('active');
-        currentMediaSlideIndex = index;
-
-        const currentSlideData = slidesData[index];
-        if (currentSlideData.type === 'image') {
-            if (isMediaAutoplay) {
-                const duration = Math.floor(Math.random() * 3000) + 2000;
-                mediaAutoplayTimeout = setTimeout(() => {
-                    nextMediaSlide();
-                }, duration);
-            }
-        } else if (currentSlideData.type === 'video') {
-            const iframe = slides[index].querySelector('iframe');
-            const videoTag = slides[index].querySelector('video');
-
-            if (iframe && iframe.contentWindow) {
-                if (iframe.src.includes('youtube.com')) {
-                    iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-                }
-            } else if (videoTag) {
-                currentGalleryVideo = videoTag;
-                videoTag.play();
-                manageGalleryAudio();
-            }
-        }
-    }
-}
-
-function nextMediaSlide() {
-    const slides = document.querySelectorAll('#mediaSlideshow .media-slide');
-    currentMediaSlideIndex = (currentMediaSlideIndex + 1) % slides.length;
-    showMediaSlide(currentMediaSlideIndex);
-}
-
-function previousMediaSlide() {
-    const slides = document.querySelectorAll('#mediaSlideshow .media-slide');
-    currentMediaSlideIndex = (currentMediaSlideIndex - 1 + slides.length) % slides.length;
-    showMediaSlide(currentMediaSlideIndex);
-}
-
-function toggleMediaAutoplay() {
-    if (isMediaAutoplay) {
-        clearTimeout(mediaAutoplayTimeout);
-        isMediaAutoplay = false;
-        if (currentGalleryVideo) {
-            currentGalleryVideo.pause();
-        }
-    } else {
-        isMediaAutoplay = true;
-        showMediaSlide(currentMediaSlideIndex);
-    }
-    updateMediaControls();
-}
-
 // --- Admin Modal Functions ---
 function openAdminModal() {
     adminModal.classList.add('show');
     document.body.style.overflow = 'hidden';
     renderAdminMediaList();
-    clearTimeout(mediaAutoplayTimeout);
+    clearTimeout(statusAutoplayTimeout);
     if (currentGalleryVideo) {
         currentGalleryVideo.pause();
         currentGalleryVideo.muted = true;
@@ -602,8 +867,8 @@ function openAdminModal() {
 function closeAdminModal() {
     adminModal.classList.remove('show');
     document.body.style.overflow = 'auto';
-    if (isMediaAutoplay && mainContent.classList.contains('show')) {
-        showMediaSlide(currentMediaSlideIndex);
+    if (isStatusAutoplay && mainContent.classList.contains('show')) {
+        selectStatus(currentStatusIndex);
     }
 }
 
@@ -621,7 +886,7 @@ function renderAdminMediaList() {
             let mediaElement;
             if (slide.src.includes('youtube.com')) {
                 mediaElement = document.createElement('iframe');
-                mediaElement.src = slide.src.replace('?enablejsapi=1', '?enablejsapi=1&autoplay=0&controls=0&showinfo=0&rel=0');
+                mediaElement.src = slide.src;
                 mediaElement.setAttribute('frameborder', '0');
                 mediaElement.setAttribute('allow', 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
                 mediaElement.setAttribute('allowfullscreen', '');
@@ -683,8 +948,8 @@ function deleteMedia(index) {
         slidesData.splice(index, 1);
         saveSlidesData();
         
-        if (currentMediaSlideIndex >= slidesData.length) {
-            currentMediaSlideIndex = Math.max(0, slidesData.length - 1);
+        if (currentStatusIndex >= slidesData.length) {
+            currentStatusIndex = Math.max(0, slidesData.length - 1);
         }
 
         updateContent();
@@ -697,79 +962,21 @@ function deleteMedia(index) {
 function showAllMedia() {
     mediaModal.classList.add('show');
     document.body.style.overflow = 'hidden';
-    clearTimeout(mediaAutoplayTimeout);
+    clearTimeout(statusAutoplayTimeout);
     
     if (currentGalleryVideo) {
         currentGalleryVideo.pause();
         currentGalleryVideo.muted = true;
     }
-
-    document.querySelectorAll('#mediaSlideshow iframe, #mediaSlideshow video').forEach(media => {
-        if (media.tagName === 'IFRAME' && media.contentWindow) {
-            if (media.src.includes('youtube.com')) {
-                media.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-            }
-        } else if (media.tagName === 'VIDEO') {
-            media.pause();
-        }
-    });
 }
 
 function closeMediaModal() {
     mediaModal.classList.remove('show');
     document.body.style.overflow = 'auto';
-    if (isMediaAutoplay && mainContent.classList.contains('show')) {
-        showMediaSlide(currentMediaSlideIndex);
+    if (isStatusAutoplay && mainContent.classList.contains('show')) {
+        selectStatus(currentStatusIndex);
     }
-    
-    document.querySelectorAll('#modalMediaGrid iframe, #modalMediaGrid video').forEach(media => {
-        if (media.tagName === 'IFRAME' && media.contentWindow) {
-            if (media.src.includes('youtube.com')) {
-                media.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-            }
-        } else if (media.tagName === 'VIDEO') {
-            media.pause();
-        }
-    });
 }
-
-// Click on Divine image to enter main content - FIXED: Stop audio on click with brief play fallback
-divineImageContainer.addEventListener('click', function() {
-    // If audio is currently paused (meaning autoplay was blocked and this is the first interaction)
-    if (devotionalAudio && devotionalAudio.paused) {
-        devotionalAudio.play().then(() => {
-            console.log('🎵 Audio played briefly on image click (autoplay fallback)');
-            // Add a very short delay before stopping, to make the sound audible for a moment
-            setTimeout(() => {
-                stopBackgroundAudio();
-            }, 100); // 100ms delay
-        }).catch(err => {
-            console.error('Failed to play audio on image click during fallback:', err);
-            stopBackgroundAudio(); // Still ensure it's stopped even if play failed
-        });
-    } else {
-        // If audio was already playing (autoplay successful), just stop it immediately
-        stopBackgroundAudio();
-    }
-
-    divineImageContainer.classList.add('closing');
-
-    setTimeout(() => {
-        devotionalTransitionOverlay.classList.add('show');
-        
-        setTimeout(() => {
-            loadingScreen.style.display = 'none';
-        }, 800);
-
-        setTimeout(() => {
-            mainContent.classList.add('show');
-            
-            if (isMediaAutoplay) {
-                showMediaSlide(currentMediaSlideIndex);
-            }
-        }, 1500);
-    }, 500);
-});
 
 // Mobile menu toggle
 menuToggle.addEventListener('click', function() {
@@ -801,6 +1008,11 @@ adminModal.addEventListener('click', function(e) {
         closeAdminModal();
     }
 });
+pujaModal.addEventListener('click', function(e) {
+    if (e.target === pujaModal) {
+        closePujaModal();
+    }
+});
 
 // Smooth scrolling for navigation links
 document.addEventListener('click', function(e) {
@@ -817,10 +1029,8 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// Scroll event listener for gallery audio management
+// Scroll event listener
 window.addEventListener('scroll', function() {
-    manageGalleryAudio();
-    
     // Scroll to top button
     if (window.scrollY > 600) {
         if (!document.querySelector('.scroll-to-top')) {
@@ -868,42 +1078,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Intersection Observer for scroll animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe all sections for scroll animations
-document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(40px)';
-    section.style.transition = 'all 0.8s ease-out';
-    observer.observe(section);
-});
-
-// Enhanced interactions for cards
-document.querySelectorAll('.donor-card, .puja-card, .special-donor-card, .event-card, .contact-card, .service-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px) scale(1.02)';
-        this.style.boxShadow = '0 20px 40px rgba(255,140,0,0.3)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-        this.style.boxShadow = 'none';
-    });
-});
-
 // Keyboard navigation
 document.addEventListener('keydown', function(e) {
     switch(e.key) {
@@ -911,30 +1085,22 @@ document.addEventListener('keydown', function(e) {
             closeMenu();
             closeMediaModal();
             closeAdminModal();
+            closePujaModal();
             break;
         case 'ArrowLeft':
-            if (mainContent.classList.contains('show') && !mediaModal.classList.contains('show') && !adminModal.classList.contains('show')) {
-                const mediaGallerySection = document.getElementById('media-gallery');
-                if (mediaGallerySection && mediaGallerySection.getBoundingClientRect().top <= 120 && mediaGallerySection.getBoundingClientRect().bottom >= 120) {
-                    previousMediaSlide();
-                }
+            if (mainContent.classList.contains('show') && !mediaModal.classList.contains('show') && !adminModal.classList.contains('show') && !pujaModal.classList.contains('show')) {
+                previousStatus();
             }
             break;
         case 'ArrowRight':
-            if (mainContent.classList.contains('show') && !mediaModal.classList.contains('show') && !adminModal.classList.contains('show')) {
-                const mediaGallerySection = document.getElementById('media-gallery');
-                if (mediaGallerySection && mediaGallerySection.getBoundingClientRect().top <= 120 && mediaGallerySection.getBoundingClientRect().bottom >= 120) {
-                    nextMediaSlide();
-                }
+            if (mainContent.classList.contains('show') && !mediaModal.classList.contains('show') && !adminModal.classList.contains('show') && !pujaModal.classList.contains('show')) {
+                nextStatus();
             }
             break;
         case ' ':
-            if (mainContent.classList.contains('show') && !mediaModal.classList.contains('show') && !adminModal.classList.contains('show')) {
+            if (mainContent.classList.contains('show') && !mediaModal.classList.contains('show') && !adminModal.classList.contains('show') && !pujaModal.classList.contains('show')) {
                 e.preventDefault();
-                const mediaGallerySection = document.getElementById('media-gallery');
-                if (mediaGallerySection && mediaGallerySection.getBoundingClientRect().top <= 120 && mediaGallerySection.getBoundingClientRect().bottom >= 120) {
-                    toggleMediaAutoplay();
-                }
+                toggleStatusAutoplay();
             }
             break;
     }
@@ -963,13 +1129,13 @@ function handleSwipe() {
     const diffY = touchStartY - touchEndY;
     
     if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > swipeThreshold) {
-        if (mainContent.classList.contains('show') && !mediaModal.classList.contains('show') && !adminModal.classList.contains('show')) {
-            const mediaGallerySection = document.getElementById('media-gallery');
-            if (mediaGallerySection && mediaGallerySection.getBoundingClientRect().top <= 120 && mediaGallerySection.getBoundingClientRect().bottom >= 120) {
+        if (mainContent.classList.contains('show') && !mediaModal.classList.contains('show') && !adminModal.classList.contains('show') && !pujaModal.classList.contains('show')) {
+            const gallerySection = document.getElementById('media-gallery');
+            if (gallerySection && gallerySection.getBoundingClientRect().top <= 120 && gallerySection.getBoundingClientRect().bottom >= 120) {
                 if (diffX > 0) {
-                    nextMediaSlide();
+                    nextStatus();
                 } else {
-                    previousMediaSlide();
+                    previousStatus();
                 }
             }
         }
@@ -1008,7 +1174,7 @@ function addRippleEffect(element, event) {
 
 // Apply ripple effect to buttons and interactive elements
 document.addEventListener('click', function(e) {
-    const interactiveElements = ['button', 'a', '.donor-card', '.puja-card', '.event-card', '.gallery-btn', '.lang-btn', '.special-donor-card', '.modal-media-item', '.admin-delete-btn', '.admin-add-btn', '.contact-card', '.service-card'];
+    const interactiveElements = ['button', 'a', '.donor-card', '.puja-card', '.event-card', '.gallery-btn', '.lang-btn', '.special-donor-card', '.modal-media-item', '.admin-delete-btn', '.admin-add-btn', '.contact-card', '.service-card', '.status-story', '.clickable-puja'];
     const element = e.target.closest(interactiveElements.join(', '));
     
     if (element && !element.classList.contains('no-ripple')) {
@@ -1054,7 +1220,183 @@ document.head.appendChild(floatUpStyle);
 // Create floating elements periodically
 setInterval(createFloatingElement, 4000);
 
-// Initialize page - FIXED: Start background audio immediately
+// Intersection Observer for scroll animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Observe all sections for scroll animations
+document.querySelectorAll('section').forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(40px)';
+    section.style.transition = 'all 0.8s ease-out';
+    observer.observe(section);
+});
+
+// Enhanced interactions for cards
+document.querySelectorAll('.donor-card, .puja-card, .special-donor-card, .event-card, .contact-card, .service-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px) scale(1.02)';
+        this.style.boxShadow = '0 20px 40px rgba(255,140,0,0.3)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+        this.style.boxShadow = 'none';
+    });
+});
+
+// Auto-scroll status stories on mobile
+function autoScrollStories() {
+    const storiesContainer = document.getElementById('statusStoriesRow');
+    if (storiesContainer && window.innerWidth <= 768) {
+        const scrollAmount = 80; // Width of one story + gap
+        const maxScroll = storiesContainer.scrollWidth - storiesContainer.clientWidth;
+        
+        if (storiesContainer.scrollLeft >= maxScroll) {
+            storiesContainer.scrollLeft = 0;
+        } else {
+            storiesContainer.scrollLeft += scrollAmount;
+        }
+    }
+}
+
+// Auto-scroll stories every 3 seconds on mobile
+setInterval(autoScrollStories, 3000);
+
+// Add touch gestures for status navigation
+let statusTouchStartX = 0;
+let statusTouchStartY = 0;
+
+statusViewer.addEventListener('touchstart', function(e) {
+    statusTouchStartX = e.touches[0].clientX;
+    statusTouchStartY = e.touches[0].clientY;
+});
+
+statusViewer.addEventListener('touchend', function(e) {
+    const touchEndX = e.changedTouches[0].clientX;
+    const touchEndY = e.changedTouches[0].clientY;
+    const diffX = statusTouchStartX - touchEndX;
+    const diffY = statusTouchStartY - touchEndY;
+    
+    // Only handle horizontal swipes
+    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+            nextStatus();
+        } else {
+            previousStatus();
+        }
+    }
+});
+
+// Pause autoplay when user interacts with status
+statusViewer.addEventListener('click', function(e) {
+    // Don't interfere with control buttons
+    if (!e.target.closest('.status-prev, .status-next')) {
+        if (isStatusAutoplay) {
+            clearTimeout(statusAutoplayTimeout);
+            isStatusAutoplay = false;
+            updateMediaControls();
+        }
+    }
+});
+
+// Resume autoplay after 5 seconds of inactivity
+let inactivityTimer;
+function resetInactivityTimer() {
+    clearTimeout(inactivityTimer);
+    inactivityTimer = setTimeout(() => {
+        if (!isStatusAutoplay && mainContent.classList.contains('show')) {
+            isStatusAutoplay = true;
+            selectStatus(currentStatusIndex);
+            updateMediaControls();
+        }
+    }, 5000);
+}
+
+// Reset inactivity timer on user interaction
+document.addEventListener('click', resetInactivityTimer);
+document.addEventListener('touchstart', resetInactivityTimer);
+document.addEventListener('keydown', resetInactivityTimer);
+
+// Optimize video loading for mobile
+function optimizeVideoForMobile() {
+    if (window.innerWidth <= 768) {
+        document.querySelectorAll('video').forEach(video => {
+            video.setAttribute('preload', 'metadata');
+            video.setAttribute('playsinline', '');
+        });
+    }
+}
+
+// Call optimization on load and resize
+window.addEventListener('load', optimizeVideoForMobile);
+window.addEventListener('resize', optimizeVideoForMobile);
+
+// Add status viewer click to pause/play functionality
+let statusClickCount = 0;
+statusContent.addEventListener('click', function(e) {
+    // Avoid double-click issues
+    statusClickCount++;
+    setTimeout(() => {
+        if (statusClickCount === 1) {
+            // Single click - pause/play
+            if (currentGalleryVideo) {
+                if (currentGalleryVideo.paused) {
+                    currentGalleryVideo.play();
+                } else {
+                    currentGalleryVideo.pause();
+                }
+            }
+            
+            // Toggle autoplay
+            if (isStatusAutoplay) {
+                clearTimeout(statusAutoplayTimeout);
+                isStatusAutoplay = false;
+            } else {
+                isStatusAutoplay = true;
+                selectStatus(currentStatusIndex);
+            }
+            updateMediaControls();
+        }
+        statusClickCount = 0;
+    }, 300);
+});
+
+// Prevent context menu on status viewer (like WhatsApp)
+statusViewer.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+// Add status progress animation
+function animateProgressBar() {
+    const activeBar = document.querySelector('.progress-bar.active .progress-fill');
+    if (activeBar) {
+        activeBar.style.animation = 'none';
+        setTimeout(() => {
+            activeBar.style.animation = 'progressFill 5s linear';
+        }, 10);
+    }
+}
+
+// Call progress animation when status changes
+const originalSelectStatus = selectStatus;
+selectStatus = function(index) {
+    originalSelectStatus(index);
+    setTimeout(animateProgressBar, 100);
+};
+
+// Initialize page - Directly show main content
 document.addEventListener('DOMContentLoaded', function() {
     // Load data from localStorage first
     loadSlidesData();
@@ -1063,17 +1405,13 @@ document.addEventListener('DOMContentLoaded', function() {
     currentLanguage = 'telugu';
     selectLanguage('telugu', {target: document.querySelector('.lang-btn.active')});
 
-    // Show loading screen immediately
-    loadingScreen.style.display = 'flex';
-    loadingScreen.style.opacity = '1';
-
-    // START BACKGROUND AUDIO IMMEDIATELY when page loads
-    startBackgroundAudio();
+    // Show main content immediately
+    mainContent.style.display = 'block';
+    mainContent.style.opacity = '1';
 
     console.log('🕉️ శ్రీ దుర్గాదేవి శరన్నవరాత్రి మహోత్సవాలు వెబ్‌సైట్ విజయవంతంగా లోడ్ అయింది 🕉️');
-    console.log('🎵 బ్యాక్‌గ్రౌండ్ ఆడియో లోడింగ్ స్క్రీన్‌లో ప్లే అవుతోంది');
-    console.log('📱 మొబైల్ మెనూ పేర్లు సరిచేయబడ్డాయి');
-    console.log('🎬 గ్యాలరీ వీడియో ఆడియో మేనేజ్‌మెంట్ చేర్చబడింది');
+    console.log('📱 WhatsApp స్టైల్ గ్యాలరీ జోడించబడింది');
+    console.log('🎭 పూజా వివరాల మోడల్ జోడించబడింది');
     console.log('✨ అన్ని ఫీచర్లు పూర్తిగా పని చేస్తున్నాయి');
 });
 
@@ -1088,25 +1426,26 @@ window.addEventListener('error', function(e) {
     console.error('❌ వెబ్‌సైట్ లోపం:', e.error);
 });
 
-// Add visibility change handling - FIXED: Don't restart audio
+// Add visibility change handling
 document.addEventListener('visibilitychange', function() {
     if (document.hidden) {
-        clearTimeout(mediaAutoplayTimeout);
+        clearTimeout(statusAutoplayTimeout);
+        clearTimeout(inactivityTimer);
         if (currentGalleryVideo) {
             currentGalleryVideo.pause();
         }
-        // Keep background audio playing even when tab is hidden
     } else {
-        if (isMediaAutoplay && mainContent.classList.contains('show') && !mediaModal.classList.contains('show') && !adminModal.classList.contains('show')) {
-            showMediaSlide(currentMediaSlideIndex);
+        if (isStatusAutoplay && mainContent.classList.contains('show') && !mediaModal.classList.contains('show') && !adminModal.classList.contains('show') && !pujaModal.classList.contains('show')) {
+            selectStatus(currentStatusIndex);
         }
-        // Don't restart background audio - it should continue playing until image click
+        resetInactivityTimer();
     }
 });
 
 // Final cleanup
 window.addEventListener('beforeunload', function() {
-    clearTimeout(mediaAutoplayTimeout);
+    clearTimeout(statusAutoplayTimeout);
+    clearTimeout(inactivityTimer);
     
     document.querySelectorAll('video, audio').forEach(media => {
         media.pause();
@@ -1114,3 +1453,37 @@ window.addEventListener('beforeunload', function() {
     
     console.log('🙏 ధన్యవాదాలు! మళ్లీ రండి! 🙏');
 });
+
+// Add PWA manifest support
+const manifest = {
+    name: "శ్రీ దుర్గాదేవి శరన్నవరాత్రి మహోత్సవములు",
+    short_name: "దుర్గాదేవి మహోత్సవాలు",
+    description: "కొరగాo గ్రామం దైవ వేడుకలు మరియు మహోత్సవములు",
+    start_url: "/",
+    display: "standalone",
+    background_color: "#2d1b69",
+    theme_color: "#FFD700",
+    icons: [
+        {
+            src: "icon-192.png",
+            sizes: "192x192",
+            type: "image/png"
+        },
+        {
+            src: "icon-512.png",
+            sizes: "512x512",
+            type: "image/png"
+        }
+    ]
+};
+   
+// Create and inject manifest
+const manifestBlob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
+const manifestURL = URL.createObjectURL(manifestBlob);
+const link = document.createElement('link');
+link.rel = 'manifest';
+link.href = manifestURL;
+document.head.appendChild(link);
+
+console.log('🎉 వెబ్‌సైట్ పూర్తిగా లోడ్ అయింది - పూజా వివరాలు మరియు WhatsApp స్టైల్ గ్యాలరీతో! 🎉');
+
