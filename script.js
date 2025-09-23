@@ -1487,3 +1487,4 @@ document.head.appendChild(link);
 
 console.log('🎉 వెబ్‌సైట్ పూర్తిగా లోడ్ అయింది - పూజా వివరాలు మరియు WhatsApp స్టైల్ గ్యాలరీతో! 🎉');
 
+
