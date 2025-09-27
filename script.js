@@ -215,8 +215,8 @@ const content = {
         
         // Media Gallery Section
         galleryTitle: "📸🎬 Sacred Moments Gallery",
-        media1Text: " ",
-        media2Text: "",
+        media1Text: "🪔 సహస్ర దీపాలంకరణ సేవ",
+        media2Text: "🪔 సహస్ర దీపాలంకరణ సేవ",
         media3Text: "",
         media4Text: "",
         media5Text: "",
@@ -505,11 +505,11 @@ const pujaDetails = {
 
 // Default slides data with your specified video paths
 let slidesData = [
-    { type: 'image', src: 'img1.jpg', textKey: 'media1Text' },
-    { type: 'image', src: 'img2.jpg', textKey: 'media2Text' },
+    { type: 'image', src: 'dep1.jpg', textKey: 'media1Text' },
+    { type: 'image', src: 'dep2.jpg', textKey: 'media2Text' },
     { type: 'image', src: 'img3.jpg', textKey: 'media3Text' },
     { type: 'image', src: 'img4.jpg', textKey: 'media4Text' },
-    { type: 'video', src: 'main.mp4', textKey: 'media5Text' }, 
+    { type: 'video', src: 'p.mp4', textKey: 'media5Text' }, 
     { type: 'video', src: 'vid.mp4', textKey: 'media6Text' }, 
     { type: 'video', src: 'vid3.mp4', textKey: 'media7Text' },
     { type: 'video', src: 'bajana.mp4', textKey: 'media8Text' },
@@ -522,8 +522,8 @@ let slidesData = [
     { type: 'video', src: 'vid5.mp4', textKey: 'media15Text' },
     { type: 'video', src: 'vid6.mp4', textKey: 'media16Text' },
     { type: 'video', src: 'vid7.mp4', textKey: 'media17Text' },
-    { type: 'image', src: 'dep1.jpg', textKey: 'media18Text' },
-    { type: 'image', src: 'dep2.jpg', textKey: 'media19Text' },
+    { type: 'image', src: 'img1.jpg', textKey: 'media18Text' },
+    { type: 'image', src: 'img2.jpg', textKey: 'media19Text' },
     { type: 'video', src: 'p.mp4', textKey: 'media20Text' }
 ];
 
@@ -1498,5 +1498,6 @@ link.href = manifestURL;
 document.head.appendChild(link);
 
 console.log('🎉 వెబ్‌సైట్ పూర్తిగా లోడ్ అయింది - పూజా వివరాలు మరియు WhatsApp స్టైల్ గ్యాలరీతో! 🎉');
+
 
 
