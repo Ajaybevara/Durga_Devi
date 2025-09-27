@@ -97,6 +97,10 @@ const content = {
         media14ext:"",
         media15ext:"",
         media16ext:"",
+        media17ext:"🪔 సహస్ర దీపాలంకరణ సేవ",
+        media18ext:"🪔 సహస్ర దీపాలంకరణ సేవ",
+        media19ext:"🪔 సహస్ర దీపాలంకరణ సేవ",
+        media20ext:"",
         prevMediaBtn: "‹",
         nextMediaBtn: "›",
         showAllMediaBtn: "🖼️ అన్ని మీడియా చూడండి",
@@ -227,6 +231,10 @@ const content = {
         media14Text: "",
         media15Text: "",
         media16Text: "",
+        media17ext:"🪔 సహస్ర దీపాలంకరణ సేవ",
+        media18ext:"🪔 సహస్ర దీపాలంకరణ సేవ",
+        media19ext:"🪔 సహస్ర దీపాలంకరణ సేవ",
+        media20ext:"",
         prevMediaBtn: "‹",
         nextMediaBtn: "›",
         showAllMediaBtn: "🖼️ View All Media",
@@ -512,7 +520,11 @@ let slidesData = [
     { type: 'video', src: 'vid2.mp4', textKey: 'media13Text' },
     { type: 'video', src: 'vid4.mp4', textKey: 'media14Text' },
     { type: 'video', src: 'vid5.mp4', textKey: 'media15Text' },
-    { type: 'video', src: 'vid6.mp4', textKey: 'media16Text' }
+    { type: 'video', src: 'vid6.mp4', textKey: 'media16Text' },
+    { type: 'video', src: 'vid7.mp4', textKey: 'media17Text' },
+    { type: 'image', src: 'dep1.jpg', textKey: 'media18Text' },
+    { type: 'image', src: 'dep2.jpg', textKey: 'media19Text' },
+    { type: 'video', src: 'p.mp4', textKey: 'media20Text' }
 ];
 
 // Variables
